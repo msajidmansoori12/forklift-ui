@@ -13,7 +13,7 @@ import { kebab, kebabDropDownItem } from '../integration/views/provider.view';
 import { confirmButton } from '../integration/views/plan.view';
 
 export function inputText(fieldId: string, text: string): void {
-  cy.get(fieldId, { timeout: 30 * SEC })
+  cy.get(fieldId, { timeout: 50 * SEC })
     .last()
     .clear()
     .type(text);

@@ -125,7 +125,7 @@ export class Plan {
     } else if (providerData.type == providerType.rhv) {
       cluster = sourceClusterName;
     }
-    cy.contains('label', cluster, { timeout: 60 * SEC })
+    cy.contains('label', cluster, { timeout: 95 * SEC })
       .closest('.pf-c-tree-view__node-container')
       .within(() => {
         click(button);
@@ -347,7 +347,7 @@ export class Plan {
     let i;
     // Iterating through the list of VMs
     for (i = 0; i < rowAmount; i++) {
-      cy.get(`[aria-label="Select row ${i}"]`, { timeout: 30 * SEC })
+      cy.get(`[aria-label="Select row ${i}"]`, { timeout: 90 * SEC })
         .closest(trTag)
         .within(() => {
           cy.get('[data-label="Status"]', { timeout: 3600 * SEC }).should(

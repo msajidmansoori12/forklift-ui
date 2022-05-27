@@ -12,7 +12,7 @@ export class Provider {
 
   protected openMenu(): void {
     //TODO: replace hardcoded timeout by expecting button to become clickable
-    cy.wait(2000);
+    cy.wait(20000);
     Provider.openList();
   }
 
