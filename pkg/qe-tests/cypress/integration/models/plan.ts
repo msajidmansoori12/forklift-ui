@@ -130,7 +130,7 @@ export class Plan {
       .within(() => {
         click(button);
       });
-    const selector = `[aria-label="Select Cluster ${sourceClusterName}"]`;
+    const selector = `[aria-label="Select Folder ${sourceClusterName}"]`;
     selectCheckBox(selector); //Added selectCheckBox function
     next();
   }
