@@ -125,7 +125,7 @@ export class Plan {
     } else if (providerData.type == providerType.rhv) {
       cluster = sourceClusterName;
     }
-    cy.contains('label', cluster, { timeout: 120 * SEC })
+    cy.contains('label', cluster, { timeout: 300 * SEC })
       .closest('.pf-c-tree-view__node-container')
       .within(() => {
         click(button);
@@ -414,7 +414,7 @@ export class Plan {
     this.selectMigrationTypeStep(planData);
     this.hooksStep(planData);
     this.finalReviewStep(planData);
-    cy.wait(2 * SEC);
+    cy.wait(20 * SEC);
   }
 
   delete(planData: PlanData): void {
