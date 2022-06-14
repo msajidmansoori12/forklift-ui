@@ -123,7 +123,7 @@ export class Plan {
     } else if (providerData.type == providerType.rhv) {
       cluster = sourceClusterName;
     }
-    cy.contains('label', cluster, { timeout: 120 * SEC })
+    cy.contains('label', cluster, { timeout: 500 * SEC })
       .closest('.pf-c-tree-view__node-container')
       .within(() => {
         click(button);
