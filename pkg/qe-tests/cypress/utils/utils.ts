@@ -13,7 +13,7 @@ import { kebab, kebabDropDownItem } from '../integration/views/provider.view';
 import { confirmButton } from '../integration/views/plan.view';
 
 export function inputText(fieldId: string, text: string): void {
-  cy.get(fieldId, { timeout: 500 * SEC })
+  cy.get(fieldId, { timeout: 120 * SEC })
     .last()
     .clear()
     .type(text);
@@ -21,7 +21,7 @@ export function inputText(fieldId: string, text: string): void {
 
 // Clicking on button with selection by text (when no other selector can be used)
 export function clickByText(fieldId: string, buttonText: string): void {
-  cy.contains(fieldId, buttonText, { timeout: 500 * SEC }).click();
+  cy.contains(fieldId, buttonText, { timeout: 120 * SEC }).click();
 }
 
 // Clicking on object selected by fieldId
